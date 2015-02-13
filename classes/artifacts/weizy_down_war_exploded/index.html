@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>微中医下载</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="用10年时间（2014-2024）让1000万个家庭因中医而更健康！">
+    <meta name="keywords" content="用10年时间（2014-2024）让1000万个家庭因中医而更健康！">
+    <meta name="author" content="lohas,www.weizy.cn">
+
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <style type="text/css">
+    @charset "utf-8";
+
+    body,
+    div,
+    h1,
+    h3,
+    h4,
+    p,
+    ul,
+    li {
+        margin: 0;
+        padding: 0;
+    }
+    ul {
+        list-style: none;
+    }
+    a {
+        text-decoration: none;
+        border: none;
+        outline: none;
+        color: #2d1818;
+    }
+    a:hover{
+        color: #1a0417;
+    }
+    img {
+        display: block;
+        border:none;
+    }
+    body {
+        width: 100%;
+        *cursor: default;
+		background:#009999;
+        font: 16px/1.5 "Microsoft YaHei",Helvetica,STHeiti STXihei,Microsoft JhengHei,Arial;
+    }
+    #pageContain {
+    }
+    .page {
+        display: none;
+        width: 100%;
+        height: 100%;
+        margin:auto
+    }
+    .contain {
+        width: 100%;
+        height: 100%;
+        display: none;
+        position: relative;
+        z-index: 0;
+        padding-top: 70px;
+    }
+    .current .contain,.slide .contain {
+        display: block;
+    }
+    .current {
+        display: block;
+        z-index: 1;
+    }
+    .page1 {
+        background: #009999;
+    }
+
+    .section1 {
+        background: #fff;
+    }
+
+    #navBar li {
+        background: transparent;
+        border: 1px solid #ccc;
+        display: inline-block;
+        font-size: 0px;
+        margin: 0 4px;
+        *float: left;
+        *zoom:1;
+        cursor: pointer;
+        transition: all .7s ease;
+        border-radius: 50%;
+        line-height: 10px;
+        text-align: center;
+        width: 10px;
+        height: 10px;
+    }
+
+    .nav {
+        z-index: 5;
+        position: fixed;
+        _position:absolute;
+        box-shadow: 0 2px 10px 0px #000;
+        background: #fff;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 70px;
+        line-height: 70px;
+    }
+    .logo {
+
+        vertical-align: top;
+        margin: 9px 0 0 20px;
+        transition:all .4s ease;
+    }
+    .logo:hover {
+        transform:rotate(5deg) scale(1.05);
+    }
+    .nav a {
+        line-height: 70px;
+        transition:all .4s ease;
+        color: #333;
+    }
+    .nav a:hover {
+        text-shadow:1px 1px 3px #000;
+    }
+    .nav h1 {
+        line-height: 70px;
+        float: left;
+    }
+    .nav span {
+        position: absolute;
+        left: 80px;
+        top: 0;
+    }
+    .nav h1 p {
+        display: none;
+    }
+    .nav li {
+        display: inline;
+        float: right;
+        margin: 0 22px;
+    }
+    .title,.titleEng {
+        -webkit-animation:dragTop .7s ease-in-out both;
+        -moz-animation:dragTop .7s ease-in-out both;
+        -ms-animation:dragTop .7s ease-in-out both;
+        animation:dragTop .7s ease-in-out both;
+    }
+
+    .title {
+        -webkit-animation-delay: .8s;
+        -moz-animation-delay:.8s;
+        -ms-animation-delay:.8s;
+        animation-delay:.8s;
+        line-height: 60px;
+        height: 60px;
+        font-weight: normal;
+        letter-spacing: 8px;
+        font-size: 40px;
+        text-align: center;
+        color: #fff;
+        margin-top: 30px;
+        padding: 10px;
+    }
+    .titleEng {
+        -webkit-animation-delay: 1.2s;
+        -moz-animation-delay:1.2s;
+        -ms-animation-delay:1.2s;
+        animation-delay:1.2s;
+        line-height: 50px;
+        font-size: 24px;
+        margin: 10px auto;
+        text-align: center;
+        color:#fff ;
+    }
+    .page3 .title,.page3 .titleEng {
+        top: 30%;
+        color: #333;
+    }
+    .page1 p {
+        font-size: 24px;
+        color: #fff;
+        text-align: center;
+        width: 100%;
+        -webkit-animation:scaleIn .6s ease 2s both;
+        -moz-animation:scaleIn .6s ease 2s both;
+        -ms-animation:scaleIn .6s ease 2s both;
+        animation:scaleIn .6s ease 2s both;
+		padding-bottom: 30px;
+    }
+    .page1-box,.page2-box,.page3-box,.page4-box {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        -webkit-animation:scaleAll .7s ease-in-out 1.6s both;
+        -moz-animation:scaleAll .7s ease-in-out 1.6s both;
+        -ms-animation:scaleAll .7s ease-in-out 1.6s both;
+        animation:scaleAll .7s ease-in-out 1.6s both;
+    }
+
+
+    .page4-box img{
+        float: right;
+        -webkit-animation:scaleIn .6s ease 2.4s both;
+        -moz-animation:scaleIn .6s ease 2.4s both;
+        -ms-animation:scaleIn .6s ease 2.4s both;
+        animation:scaleIn .6s ease 2.4s both;
+    }
+
+    .section1 .contain {
+        display: block !important;
+    }
+
+    @media screen and (max-width: 680px) {
+        .nav ul {
+            display: none;
+        }
+        .nav span {
+            font-size: 22px;
+        }
+        .page1 p {
+            font-size: 14px;
+        }
+        #next,#prev {
+            display: none;
+        }
+        .page1-box {
+            width: 182px;
+            height: 173px;
+        }
+        .page2-box {
+            width: 320px;
+            height: 140px;
+        }
+        .page3-box {
+            margin-left: -60px;
+            margin-top: -50px;
+            width: 160px;
+            height: 100px;
+        }
+        .page4-box {
+            margin-left: -91px;
+            margin-top: -90px;
+            width: 182px;
+            height: 173px;
+        }
+        .title {
+            font-size: 30px;
+            letter-spacing: 2px;
+        }
+        .titleEng {
+            font-size: 18px;
+        }
+    }
+
+    @keyframes dragTop {
+        0% {
+            opacity:0;
+            transform:translateY(-70px)
+        }
+        60% {
+            opacity:1;
+            transform:translateY(20px)
+        }
+        90% {
+            transform:translateY(-5px)
+        }
+        97% {
+            transform:translateY(-1px)
+        }
+        100% {
+            transform:translateY(0px)
+        }
+    }
+    @-webkit-keyframes dragTop {
+        0% {
+            opacity:0;
+            -webkit-transform:translateY(-70px)
+        }
+        60% {
+            opacity:1;
+            -webkit-transform:translateY(20px)
+        }
+        90% {
+            -webkit-transform:translateY(-5px)
+        }
+        97% {
+            -webkit-transform:translateY(-1px)
+        }
+        100% {
+            -webkit-transform:translateY(0px)
+        }
+    }
+    @-moz-keyframes dragTop {
+        0% {
+            opacity:0;
+            -moz-transform:translateY(-70px)
+        }
+        60% {
+            opacity:1;
+            -moz-transform:translateY(20px)
+        }
+        90% {
+            -moz-transform:translateY(-5px)
+        }
+        97% {
+            -moz-transform:translateY(-1px)
+        }
+        100% {
+            -moz-transform:translateY(0px)
+        }
+    }
+    @-ms-keyframes dragTop {
+        0% {
+            opacity:0;
+            -ms-transform:translateY(-70px)
+        }
+        60% {
+            opacity:1;
+            -ms-transform:translateY(20px)
+        }
+        90% {
+            -ms-transform:translateY(-5px)
+        }
+        97% {
+            -ms-transform:translateY(-1px)
+        }
+        100% {
+            -ms-transform:translateY(0px)
+        }
+    }
+    @keyframes scaleAll {
+        0% {
+            opacity: 0;
+            transform: scale(0) rotate(30deg);
+        }
+        30% {
+            opacity: 1;
+        }
+        100% {
+            transform: scale(1) rotate(0);
+        }
+    }
+    @-webkit-keyframes scaleAll {
+        0% {
+            opacity: 0;
+            -webkit-transform: scale(0) rotate(30deg);
+        }
+        30% {
+            opacity: 1;
+        }
+        100% {
+            -webkit-transform: scale(1) rotate(0);
+        }
+    }
+    @-moz-keyframes scaleAll {
+        0% {
+            opacity: 0;
+            -moz-transform: scale(0) rotate(30deg);
+        }
+        30% {
+            opacity: 1;
+        }
+        100% {
+            -moz-transform: scale(1) rotate(0);
+        }
+    }
+    @-ms-keyframes scaleAll {
+        0% {
+            opacity: 0;
+            -ms-transform: scale(0) rotate(30deg);
+        }
+        100% {
+            opacity: 1;
+            -ms-transform: scale(1) rotate(0);
+        }
+    }
+    @keyframes scaleIn {
+        0% {
+            opacity: 0;
+            transform: scale(3);
+        }
+        100% {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+    @-webkit-keyframes scaleIn {
+        0% {
+            opacity: 0;
+            -webkit-transform: scale(3);
+        }
+        100% {
+            opacity: 1;
+            -webkit-transform: scale(1);
+        }
+    }
+    @-moz-keyframes scaleIn {
+        0% {
+            opacity: 0;
+            transform: scale(3);
+        }
+        100% {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+    @-ms-keyframes scaleIn {
+        0% {
+            opacity: 0;
+            -ms-transform: scale(3);
+        }
+        100% {
+            opacity: 1;
+            -ms-transform: scale(1);
+        }
+    }
+    @keyframes bgL {
+        0% {
+            background-position: 0 0;
+        }
+        100% {
+            background-position: 2000px 0;
+        }
+    }
+    @-webkit-keyframes bgL {
+        0% {
+            background-position: 0 0;
+        }
+        100% {
+            background-position: 2000px 0;
+        }
+    }
+    @-moz-keyframes bgL {
+        0% {
+            background-position: 0 0;
+        }
+        100% {
+            background-position: 2000px 0;
+        }
+    }
+    @-ms-keyframes bgL {
+        0% {
+            background-position: 0 0;
+        }
+        100% {
+            background-position: 2000px 0;
+        }
+    }
+    @keyframes bgR {
+        0% {
+            background-position: 2000px 0;
+        }
+        100% {
+            background-position: 0 0;
+        }
+    }
+    @-webkit-keyframes bgR {
+        0% {
+            background-position: 2000px 0;
+        }
+        100% {
+            background-position: 0 0;
+        }
+    }
+    @-moz-keyframes bgR {
+        0% {
+            background-position: 2000px 0;
+        }
+        100% {
+            background-position: 0 0;
+        }
+    }
+    @-ms-keyframes bgR {
+        0% {
+            background-position: 2000px 0;
+        }
+        100% {
+            background-position: 0 0;
+        }
+    }
+    </style>
+</head>
+<!--[if lte IE 7]>
+<body scroll="no">
+<![endif]-->
+<!--[if gt IE 7]><!-->
+<body>
+<!--<![endif]-->
+<div class="nav">
+    <h1>
+        <a href="http://www.weizy.cn">
+            <img src="images/logo.png" class="logo"  alt=""><p></p>
+            <span></span>
+        </a>
+    </h1>
+    <ul>
+        <li><a href="#">关于我们</a></li>
+    </ul>
+</div>
+<div id="article">
+
+    <div class="page section1 current">
+        <div class="contain">
+            <div id="pageContain">
+
+                <div class="page page1 current">
+                    <div class="contain">
+                        <h3 class="title">微中医</h3>
+                        <h6 class="titleEng">用10年时间，让1000万个家庭因中医而更健康！</h6>
+                        <div style="width: 100%;margin: 30px auto">
+                            <img src="images/qrcode.png" alt="HTML,CSS" class="page1-box">
+                        </div>
+                        <p>
+                           <a href="weizy.apk">点此下载apk</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

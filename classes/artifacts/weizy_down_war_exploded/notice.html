@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/><meta name="format-detection" content="telephone=no"/>
+    <title>提示</title>
+    <style type="text/css">
+        body,html{
+            background: #ffffff;
+        }
+        .content{
+            width: 100%;
+        }
+        .notice{
+            width: 60%;
+            font-size: 15px;
+            background: #e6e6e6;
+            text-align: center;
+            padding: 10px 10px 30px 10px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20%;
+        }
+    </style>
+</head>
+<body>
+<div class="content">
+    <div class="notice">
+        <p>请用其他浏览器打开</p>
+        <ul style="text-align: left;color: #565656">
+            <li style="font-size: 12px">
+                点击右上角使用其他浏览器打开
+            </li>
+        </ul>
+    </div>
+</div>
+<script type="text/javascript">
+    function isWeiXin(){
+        var ua = window.navigator.userAgent.toLowerCase();
+        if(ua.indexOf('micromessenger')>-1){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    setTimeout(function(){
+        if(!isWeiXin()){
+            document.getElementsByClassName('notice')[0].innerHTML = "下载中...";
+            document.getElementsByClassName('notice')[0].style.background = "#ffffff";
+            location.href = "weizy.apk";
+        }
+    },20);
+</script>
+</body>
+</html>
